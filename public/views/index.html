@@ -5,21 +5,27 @@
     <script src="scripts/ngbasics.js" charset="utf-8"></script>
     <link rel="stylesheet" href="vendors/bootstrap.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <meta charset="utf-8">
     <title>ANGULAR FUNS</title>
   </head>
-  <body ng-app="ourApp">
-    <h1> Our basic app </h1>
-    <div ng-controller= 'Controlla as drake'>
-      <input type="text" placeholder="moose name" ng-model= "drake.nameIn" />
-      <input type="text" placeholder="moose description" ng-model= "drake.descriptionIn" />
-      <input type="text" placeholder="moose hobby" ng-model= "drake.hobbyIn" />
-      <button ng-click='drake.addMoose()'>Add Moose</button>
-      <div class ='container row'>
-      <div ng-repeat ='mooseStuff in drake.moose' class ='col-sm-4'>
-        <h2>{{mooseStuff.name}}</h2>
-        <h4>{{mooseStuff.description}}</h4>
-        <h5>{{mooseStuff.hobby}}</h5>
+  <body ng-app="ourApp" >
+    <div class ="jumbotron">
+      <h1> Our basic app </h1>
+    </div>
+    <div ng-controller= 'Controlla as drake' ng-init="drake.getMooses()">
+      <div class ="container">
+        <input type="text" placeholder="moose name" ng-model= "drake.nameIn" />
+        <input type="text" placeholder="moose description" ng-model= "drake.descriptionIn" />
+        <input type="text" placeholder="moose hobby" ng-model= "drake.hobbyIn" />
+        <button ng-click='drake.addMoose()'>Add Moose</button>
+        <div class ='container row'>
+        <div ng-repeat ='mooseStuff in drake.drakesmooses' class ='col-sm-4'>
+          <h2>{{mooseStuff.name}}</h2>
+          <h4>{{mooseStuff.description}}</h4>
+          <h5>{{mooseStuff.hobby}}</h5>
+          <img src = "http://www.pngall.com/wp-content/uploads/2016/06/Drake-PNG-File.png" class= "drakeface"/>
+      </div>
       </div>
       </div>
 

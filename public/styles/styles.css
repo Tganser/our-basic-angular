@@ -1,0 +1,15 @@
+*{
+  font-family: 'Gloria Hallelujah', cursive;
+
+}
+
+.jumbotron {
+  text-align: center;
+  background-image: url(http://www.markpicard.com/wp-content/uploads/2013/02/Kissing-Moose.jpg);
+  color: white;
+}
+
+.drakeface {
+  width: 50%;
+  height: auto;
+}
