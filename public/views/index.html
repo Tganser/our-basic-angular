@@ -10,5 +10,19 @@
   </head>
   <body ng-app="ourApp">
     <h1> Our basic app </h1>
+    <div ng-controller= 'Controlla as drake'>
+      <input type="text" placeholder="moose name" ng-model= "drake.nameIn" />
+      <input type="text" placeholder="moose description" ng-model= "drake.descriptionIn" />
+      <input type="text" placeholder="moose hobby" ng-model= "drake.hobbyIn" />
+      <button ng-click='drake.addMoose()'>Add Moose</button>
+      <div class ='container row'>
+      <div ng-repeat ='mooseStuff in drake.moose' class ='col-sm-4'>
+        <h2>{{mooseStuff.name}}</h2>
+        <h4>{{mooseStuff.description}}</h4>
+        <h5>{{mooseStuff.hobby}}</h5>
+      </div>
+      </div>
+
+    </div>
   </body>
 </html>
